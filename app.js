@@ -39,7 +39,6 @@ function addTodo()
 
 
     todo_item.value="";
-    console.log(li);
 }
 
 function deleteItem(e)
@@ -55,7 +54,8 @@ function deleteAll()
 
 function editItem(e)
 {
-    var val=e.parentNode.firstChild.nodeValue;
+    var val=document.getElementById("para").innerHTML;
+    console.log(val)
     var editValue = prompt("Enter edit value",val);
-    e.parentNode.firstChild.nodeValue=editValue;
+    document.getElementById("para").innerHTML=editValue;
 }
